@@ -12,6 +12,7 @@ client = discord.Client(intents=intents)
 #some global variables
 startingdate = datetime.datetime(2022, 12, 25)
 jackpots = 0
+elsepots = 0
 channel = 1011428840062582785
 #list of snake images
 sillysnake = [
@@ -32,24 +33,28 @@ sillysnake = [
 @client.event
 async def on_message(message):
     global jackpots  # Declare jackpots as global so we can modify it
-
+    global elsepots
     # Avoid bot responding to its own messages
     if message.author == client.user:
         return
 
     # Randomly check if it's a jackpot event (1 in 500 chance)
     randint = random.randint(1, 500)
+    print(f"Random number: {randint}")
     if randint == 1:
         jackpots += 1  # Increment the jackpot counter
         print(f"Jackpot! Current jackpot count: {jackpots}")
         # Send a reply with a random silly snake message
         await message.reply(random.choice(sillysnake), mention_author=True)
+    else:
+        elsepots += 1
+        print(f"Else! Current else count: {elsepots}")
 
     # Check if "test" is in the message content (case-insensitive)
-   # if "test" in message.content.lower():
-      #  print("Test message received.")
-        # Send a random silly snake message
-     #   await message.channel.send(random.choice(sillysnake), reference=message)
+    if "nl2a2a" in message.content.lower():
+        print("Test message received.")
+        # Send a reply with a random silly snake message
+        await message.channel.send(random.choice(sillysnake), reference=message)
 
 
 
