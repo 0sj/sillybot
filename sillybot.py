@@ -1,4 +1,4 @@
-import discord
+    import discord
 from discord.ext import commands, tasks
 import random
 import asyncio
@@ -19,28 +19,23 @@ with open('insults.txt', 'r') as file:
 @bot.event
 async def on_ready():
     print(f'Logged in as {bot.user}')
-    send_random_insult.start()  # Start the task when the bot is ready
-    if input == "insult":
-        sendmessage()
 
-# Background task to send random insults to a channel every 15 minutes (900 seconds)
-@tasks.loop(seconds=900)  # 900 seconds = 15 minutes
-async def send_random_insult():
-    channel = bot.get_channel(1011428840062582785)  # Replace with your channel ID
-    await channel.send(f'{random.choice(possible_reply)}')
 
 def sendmessage():
     channel = bot.get_channel(1011428840062582785)  # Replace with your channel ID
     return f'{random.choice(possible_reply)}'
 
-# Command: Ping
-@bot.command()
-async def ping(ctx):
-    await ctx.send(random.choice(possible_reply))
+def senddual():
+    
 
 @bot.command()
 async def insult(ctx):
     await ctx.send(sendmessage(), reference=ctx.message)
+
+#dual
+@bot.command()
+
+
 
 # Run the bot with the token
 with open('token.txt') as f:
