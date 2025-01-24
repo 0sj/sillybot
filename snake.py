@@ -24,7 +24,10 @@ sillysnake = [
 "https://cdn.discordapp.com/attachments/1011428840062582785/1298453809747726418/bounce.gif?ex=67919758&is=679045d8&hm=8e3bba0359747997c6c2ed392e260c387820204f503e48c86a25fe1478ba523f&",
 "https://tenor.com/view/dimden-dimdem-discord-rules-discord-meme-gif-22604752",
 "https://cdn.discordapp.com/attachments/1011428840062582785/1269871020639125565/1269870822101745666remix-1722831243213.png?ex=6791c20c&is=6790708c&hm=e497df52c659cc502309f8a0d9f90ef072b05eef1da54732661fd33f3b8fe69c&",
-"https://cdn.discordapp.com/attachments/1150684690412474450/1331549915129839637/fearofsnake.png?ex=679205fe&is=6790b47e&hm=3826a55955a21166299bf365bb4dc7d9484b2c387c1d528f7a0105b260286c3d&"
+"https://cdn.discordapp.com/attachments/1150684690412474450/1331549915129839637/fearofsnake.png?ex=679205fe&is=6790b47e&hm=3826a55955a21166299bf365bb4dc7d9484b2c387c1d528f7a0105b260286c3d&",
+"https://cdn.discordapp.com/attachments/1011428840062582785/1331781453385695242/salvation_gif.gif?ex=6792dda1&is=67918c21&hm=51e5f3e8186eacc75e6b1eafbb9d6c7caa488bea23d343602ba45b9172780d25&",
+"https://cdn.discordapp.com/attachments/1011428840062582785/1331780121253773312/1330400050291146855remix-1737263463984.png?ex=6792dc64&is=67918ae4&hm=4196bc42e8e9c5cfa6e92581d9d7bb3df03b2c9371710586976e6b703b23297d&",
+"https://cdn.discordapp.com/attachments/1011428840062582785/1331778761321873500/IMG_5116.png?ex=6792db1f&is=6791899f&hm=74fbff3de31a4dcc673815dcfae23fdf198a7141c3f973f6f7ad7310007a9e23&"
 
 
 
@@ -51,7 +54,7 @@ async def on_message(message):
         print(f"Else! Current else count: {elsepots}")
 
     # Check if "test" is in the message content (case-insensitive)
-    if "nl2a2a" in message.content.lower():
+    if "nl2a2ademo" in message.content.lower():
         print("Test message received.")
         # Send a reply with a random silly snake message
         await message.channel.send(random.choice(sillysnake), reference=message)
